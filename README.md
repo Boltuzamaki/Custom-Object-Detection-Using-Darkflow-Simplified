@@ -21,13 +21,13 @@ This is a very simplified repository for custom object detection .If you want to
      [CUDA comapatible GPUs](https://developer.nvidia.com/cuda-gpus)
    - Then install anaconda cloud.  [from here](https://www.anaconda.com/distribution/) 
      Note - while installing anaconda check"the anaconda add on my PATH variable"
-     ![alt text](https://github.com/Boltuzamaki/Custom-Object-Detection-Using-Darkflow-Simplified-/blob/master/images%20support%20file/anaconda.PNG)
+     ![alt text](https://github.com/Boltuzamaki/Custom-Object-Detection-Using-Darkflow-Simplified/blob/master/images%20support%20file/anaconda.PNG)
    - Then install Cuda Toolkit 9 [from here](https://developer.nvidia.com/cuda-90-download-archive).
      Download Base installer
    - After then download Visual studio 19 [from here](https://visualstudio.microsoft.com/downloads/).Download community version.
     After installing it go to modify option and select "Desktop development with c++" and modify.You only need to download this 
     because it supports CUDA.
-    ![alt text](https://github.com/Boltuzamaki/Custom-Object-Detection-Using-Darkflow-Simplified-/blob/master/images%20support%20file/2.PNG)
+    ![alt text](https://github.com/Boltuzamaki/Custom-Object-Detection-Using-Darkflow-Simplified/blob/master/images%20support%20file/2.PNG)
     
    - Download cuDNN version which is latest and supported by CUDA 9. [from here](https://developer.nvidia.com/rdp/cudnn-archive).
      and then extract it.
@@ -37,7 +37,7 @@ This is a very simplified repository for custom object detection .If you want to
      Then add location of all the three folders of cuDNN.
      
      This will look something like this
-     ![alt text](https://github.com/Boltuzamaki/Custom-Object-Detection-Using-Darkflow-Simplified-/blob/master/images%20support%20file/3a.png?raw=true)
+     ![alt text](https://github.com/Boltuzamaki/Custom-Object-Detection-Using-Darkflow-Simplified/blob/master/images%20support%20file/3a.png?raw=true)
      
    - At last install tensorflow-gpu. (1.12.0 version is compatible with CUDA 9)
         **pip install --ignore-installed --upgrade tensorflow-gpu==1.12.0**  (And first unistall tensorflow to remove tensorflow CPU using **pip unistall tensorflow**)
@@ -78,7 +78,7 @@ Now the main part comes to run YOLO easily.
 So to setting up darkflow first clone and download the repository of darkflow [from here](https://github.com/thtrieu/darkflow) 
 
 Now first open the folder of darkflow at first it will look like this
-![alt text](https://github.com/Boltuzamaki/Custom-Object-Detection-Using-Darkflow-Simplified-/blob/master/images%20support%20file/im2.PNG?raw=true)
+![alt text](https://github.com/Boltuzamaki/Custom-Object-Detection-Using-Darkflow-Simplified/blob/master/images%20support%20file/im2.PNG?raw=true)
 
 Next we have to build the darkflow for this open anaconda prompt then type 
 ```sh
@@ -97,7 +97,7 @@ Further we have to add some folders in it.And also we have to download pretraine
 Downlaod YOLO weights  -- [from here](https://pjreddie.com/darknet/yolo/) 
 As we can see below that there are many models and corresponding .cfg file.You may use any of these according to your requirement . I prefer "YOLOv2 608x608".
 
-![alt text](https://github.com/Boltuzamaki/Custom-Object-Detection-Using-Darkflow-Simplified-/blob/master/images%20support%20file/yolo.PNG?raw=true)
+![alt text](https://github.com/Boltuzamaki/Custom-Object-Detection-Using-Darkflow-Simplified/blob/master/images%20support%20file/yolo.PNG?raw=true)
 
 Now time to create some folder in darkflow folder.
 The structure of folder is look like this 
@@ -118,7 +118,7 @@ The structure of folder is look like this
 Note -- Take care that the number of images in Image folder and number of .xml files in xml folder must be same .If not then it will cause problem in running code .
 
 Now your darflow folder should look like this 
-![alt text](https://github.com/Boltuzamaki/Custom-Object-Detection-Using-Darkflow-Simplified-/blob/master/images%20support%20file/im3.PNG?raw=true)
+![alt text](https://github.com/Boltuzamaki/Custom-Object-Detection-Using-Darkflow-Simplified/blob/master/images%20support%20file/im3.PNG?raw=true)
 
 Now setup part is done .Time for fun :)
 
@@ -126,7 +126,7 @@ Now setup part is done .Time for fun :)
 - Before training open **cfg** folder and here paste the .cfg file that you have downloaded from YOLO site.(Take care that you paste the same corresponding cfg file as your .weights). Now time to edit cfg file as your custom datatset  .
 In cfg file search classes and change the value of this according to the number of classes present in your custom training dataset.
 - Second open notepad and type of the classes if your custom dataset in it and save it as labels.txt . It should look like the figure given below
-![alt text](https://github.com/Boltuzamaki/Custom-Object-Detection-Using-Darkflow-Simplified-/blob/master/images%20support%20file/label.PNG?raw=true)
+![alt text](https://github.com/Boltuzamaki/Custom-Object-Detection-Using-Darkflow-Simplified/blob/master/images%20support%20file/label.PNG?raw=true)
 
 Time for training -- 
 
